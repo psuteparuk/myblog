@@ -330,8 +330,8 @@ nav {
 }
 
 .posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
+  // padding-bottom: 1em;
+  // border-bottom: none;
 }
 
 .post {
@@ -364,6 +364,56 @@ nav {
 footer {
   padding: 20px 0;
   text-align: center;
+}
+
+//
+// .pager
+//
+
+.pager {
+  list-style: outside none none;
+  text-align: center;
+  margin: 20px 0;
+  padding-left: 0;
+
+  &::before, &::after {
+    content: " ";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  li {
+    display: inline;
+
+    > a, > span {
+      border: 1px solid $lighterGray;
+      border-radius: 25px;
+      display: inline-block;
+      padding: 5px 14px;
+    }
+  }
+
+  .previous {
+    > a, > span {
+      float: left;
+    }
+  }
+
+  .next {
+    > a, > span {
+      float: right;
+    }
+  }
+
+  .disabled {
+    > a, > a:hover, > a:focus, > span {
+      color: $lightGray;
+      cursor: default;
+    }
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
