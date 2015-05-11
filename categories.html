@@ -1,0 +1,55 @@
+---
+layout: page
+title: Categories
+permalink: /categories/
+---
+
+<div class="category-panel col">
+  <ul class="list-unstyled clearfix">
+    {% assign categories_list = site.categories %}
+    {% if categories_list.first[0] == null %}
+      {% for category in categories_list %}
+        <li>
+          <a id="{{ category | replace: ' ', '-' }}-ref-tab" href="{{ site.baseurl }}/{{ site.categories_path}}#{{ category | replace: ' ', '-' }}-ref">
+            {{ category | capitalize }}
+            <span class="badge pull-right">{{ site.categories[category].size }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    {% else %}
+      {% for category in categories_list %}
+        <li>
+          <a id="{{ category[0] | replace: ' ', '-' }}-ref-tab" href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace: ' ', '-' }}-ref">
+            {{ category[0] | capitalize }}
+            <span class="badge pull-right">{{ category[1].size }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    {% endif %}
+    {% assign categories_list = nil %}
+  </ul>
+</div>
+
+<div class="tab-panel col">
+  {% for category in site.categories %}
+    <div class="tab-pane col" id="{{ category[0] | replace: ' ', '-' }}-ref">
+      <h3 style="margin-top: 0px">Posts in <span class="date">{{ category[0] | capitalize }}</span></h3>
+      <ul class="list-unstyled">
+        {% assign pages_list = category[1] %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if group == null or group == node.group %}
+              <li style="line-height: 35px;">
+                <a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+                <span class="date">- {{ node.date | date: "%B %e, %Y" }}</span>
+              </li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="clearfix"></div>

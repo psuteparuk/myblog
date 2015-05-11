@@ -155,6 +155,29 @@ img {
 /* LAYOUT / SECTIONS */
 /*********************/
 
+li > a {
+  color: $darkGray;
+
+  &:hover, &:active, &:focus {
+    color: $limeGreen
+  }
+}
+
+.col {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.pull-right {
+  float: right;
+}
+
+.list-unstyled {
+  list-style: outside none none;
+  margin-top: 0;
+}
+
 //
 // .sidebar
 //
@@ -163,6 +186,8 @@ img {
   position: fixed;
   top: 0px;
   padding-top: 10%;
+  padding-left: 5px;
+  padding-right: 5px;
   float: left;
   width: $sidebarWidth;
   min-height: 100%;
@@ -249,6 +274,7 @@ img {
   border-bottom: 1px solid $lightGray;
 
   @include mobile {
+    border: none;
     text-align: center;
   }
 }
@@ -376,6 +402,18 @@ footer {
 }
 
 //
+// Categories and Tags
+//
+
+.category-panel, .tag-panel, .tab-panel {
+  font-size: 16px;
+
+  @include mobile {
+    font-size: 13px;
+  }
+}
+
+//
 // .misc
 //
 
@@ -438,3 +476,4 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+@import "categories";
