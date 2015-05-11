@@ -1,3 +1,7 @@
+This is my personal blog. You can access the blog [here](http://psuteparuk.github.io/potchyblog).
+
+The site is generated through a static site generator called **Jekyll** ([repo](https://github.com/jekyll/jekyll)) and the **Jekyll Now** platform ([repo](https://github.com/barryclark/jekyll-now)).
+
 # Jekyll Now
 
 **Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll))

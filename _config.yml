@@ -1,7 +1,8 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
 name: Potcharapol Suteparuk
-description: Developer from Thailand
+description: Computer Vision Engineer and Web Developer
+bio:
 avatar: https://avatars.githubusercontent.com/u/2646790
 footer-links:
   dribbble:
@@ -21,20 +22,20 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: Potchy
+disqus: potchyblog
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://psuteparuk.github.io/myblog
+url: http://psuteparuk.github.io/potchyblog
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/myblog"
+baseurl: "/potchyblog"
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -43,6 +44,8 @@ baseurl: "/myblog"
 markdown: redcarpet
 highlighter: pygments
 permalink: /:title/
+paginate: 10
+paginate_path: "page:num"
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
