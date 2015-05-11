@@ -11,7 +11,31 @@ layout: default
 
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
+    {% if page.author %}
+    <span class="post-author">by <a href="{{ site.baseurl }}/about">{{ page.author }}</a></span>
+    {% else %}
+    <span class="post-author">by <a href="{{ site.baseurl }}/about">{{ site.nickname }}</a></span>
+    {% endif %}
   </div>
+
+  <div class="misc clearfix">
+    <div class="share">
+      {% include share.html %}
+    </div>
+  </div>
+
+  <ul class="pager clearfix">
+    {% if page.previous %}
+    <li class="previous"><a href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+    {% else %}
+    <li class="previous disabled"><a>&larr; Previous</a></li>
+    {% endif %}
+    {% if page.next %}
+    <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+    {% else %}
+    <li class="next disabled"><a>Next &rarr;</a></li>
+    {% endif %}
+  </ul>
 
   {% include disqus.html %}
 </article>
