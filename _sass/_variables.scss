@@ -8,6 +8,7 @@ $blue: #4183C4;
 $crimson: #DC143C;
 $orange: #E74C34;
 $limeGreen: #32CD32;
+$darkBlue: #2E3C50;
 
 // Grays
 $black: #000;
@@ -22,9 +23,13 @@ $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
+// Side bar width
+$sidebarWidth: 25%;
+$mainWidth: 75%;
+
 // Mobile breakpoints
 @mixin mobile {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 760px) {
     @content;
   }
 }

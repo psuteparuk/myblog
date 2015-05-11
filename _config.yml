@@ -1,8 +1,10 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-name: Potcharapol Suteparuk
-description: Computer Vision Engineer and Web Developer
-bio:
+author: Potcharapol Suteparuk
+name: Potchy's Blog
+description1: Computer Vision Engineer
+description2: +
+description3: Full Stack Developer
 avatar: https://avatars.githubusercontent.com/u/2646790
 footer-links:
   dribbble:
