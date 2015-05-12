@@ -4,11 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hi there, this is Potchy, 23, from Thailand, although currently based in Palo Alto, CA.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+### More to come ...
 
 ### Contact me
 

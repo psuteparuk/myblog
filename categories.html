@@ -2,7 +2,7 @@
 layout: page
 title: Categories
 icon: folder-icon
-permalink: /categories/
+permalink: /categories.html
 ---
 
 <div class="category-panel col">
@@ -11,7 +11,7 @@ permalink: /categories/
     {% if categories_list.first[0] == null %}
       {% for category in categories_list %}
         <li>
-          <a href="{{ site.baseurl }}/{{ site.categories_path}}#{{ category | replace: ' ', '-' }}-ref" data-tabname="{{ category | replace: ' ', '-' }}-ref-tab">
+          <a href="{{ site.baseurl }}/{{ site.categories_path}}#{{ category | replace: ' ', '-' }}-ref" name="{{ category | replace: ' ', '-' }}-ref">
             {{ category | capitalize }}
             <span class="badge pull-right">{{ site.categories[category].size }}</span>
           </a>
@@ -20,7 +20,7 @@ permalink: /categories/
     {% else %}
       {% for category in categories_list %}
         <li>
-          <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace: ' ', '-' }}-ref" data-tabname="{{ category[0] | replace: ' ', '-' }}-ref-tab">
+          <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace: ' ', '-' }}-ref" name="{{ category[0] | replace: ' ', '-' }}-ref">
             {{ category[0] | capitalize }}
             <span class="badge pull-right">{{ category[1].size }}</span>
           </a>
@@ -33,7 +33,7 @@ permalink: /categories/
 
 <div class="tab-panel col">
   {% for category in site.categories %}
-    <div class="tab-pane col" data-tabname="{{ category[0] | replace: ' ', '-' }}-ref">
+    <div class="tab-pane col" name="{{ category[0] | replace: ' ', '-' }}-ref">
       <h3 style="margin-top: 0px">Posts in <span class="date">{{ category[0] | capitalize }}</span></h3>
       <ul class="list-unstyled">
         {% assign pages_list = category[1] %}
