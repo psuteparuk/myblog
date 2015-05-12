@@ -43,6 +43,10 @@
 
   @include mobile {
     width: 40%;
+
+    &.col {
+      padding-left: 0;
+    }
   }
 }
 
@@ -67,5 +71,9 @@
 
   @include mobile {
     width: 60%;
+
+    &.col {
+      padding-right: 0;
+    }
   }
 }

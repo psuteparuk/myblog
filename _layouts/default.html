@@ -10,6 +10,7 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <!-- <link rel="icon" type="image/png" href="{{ site.avatar }}" /> -->
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
@@ -17,10 +18,11 @@
   </head>
 
   <body>
-    <div class="wrapper-masthead wrapper-right">
+    <div class="wrapper-masthead wrapper-right col">
       <div class="container">
         <header class="masthead clearfix">
           <a href="{{ site.baseurl }}/about" class="site-avatar hidden-large"><img src="{{ site.avatar }}" /></a>
+          <a href="{{ site.baseurl }}/about" class="site-avatar-small hidden"><img src="{{ site.avatar }}" /></a>
           <div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
           </div>
@@ -34,6 +36,8 @@
         </header>
       </div>
     </div>
+
+    <a href="#" id="sidebar-toggle" class="cross hidden-small"></a>
 
     <div class="sidebar">
       {% include sidebar.html %}
