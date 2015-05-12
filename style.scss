@@ -155,6 +155,12 @@ img {
 /* LAYOUT / SECTIONS */
 /*********************/
 
+a {
+  &:hover, &:active, &:focus {
+    outline: 0;
+  }
+}
+
 li > a {
   color: $darkGray;
 
@@ -203,10 +209,6 @@ li > a {
   background-repeat: no-repeat;
   background-position: center;
   background-color: $white;
-
-  &:hover, &:focus, &:active {
-    outline: 0;
-  }
 }
 
 .page-icons {
