@@ -22,17 +22,21 @@ $(document).ready(function() {
         $wrapperRightList.removeAttr('style');
       });
     }
+
+    $(this).toggleClass('rotate');
+    $(this).toggleClass('rotate-reset');
   });
 
   /* Categories and Tags */
-  $('.category-panel a').click(function(e) {
+  $('.category-panel a, .tag-panel a').click(function(e) {
     e.preventDefault();
-    $('.category-panel a').removeClass('active');
+    $('.category-panel a, .tag-panel a').removeClass('active');
     $(this).addClass('active');
 
     $('.tab-pane').hide();
-    var idArr = $(this).attr('id').split('-');
+    var idArr = $(this).data('tabname').split('-');
     idArr.pop();
-    $('#' + idArr.join('-')).show();
+    var tabname = idArr.join('-');
+    $('.tab-pane[data-tabname="' + tabname + '"]').show();
   });
 });

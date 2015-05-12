@@ -50,6 +50,7 @@ permalink: /:title/
 paginate: 10
 paginate_path: "page:num"
 categories_path: categories.html
+tags_path: tags.html
 
 # The release of Jekyll Now that you're using
 version: v1.1.0

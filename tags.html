@@ -1,0 +1,50 @@
+---
+layout: page
+title: Tags
+icon: tag-icon
+permalink: /tags/
+---
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_words = site_tags | split:',' | sort %}
+
+<div class="tag-panel col">
+  <ul class="list-unstyled clearfix">
+    {% for item in (0..site.tags.size) %}
+      {% unless forloop.last %}
+      {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+      <li>
+        <a href="#{{ this_word | replace: ' ', '-' }}-ref" data-tabname="{{ this_word | replace: ' ', '-' }}-ref-tab">
+          {{ this_word }}
+          <span class="badge pull-right">{{ site.tags[this_word].size }}</span>
+        </a>
+      </li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="tab-panel col">
+  {% for item in (0..site.tags.size) %}
+    {% unless forloop.last %}
+    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+    <div class="tab-pane col" data-tabname="{{ this_word | replace: ' ', '-' }}-ref">
+      <h3 style="margin-top: 0px">Posts tagged with <span class="date">{{ this_word }}</span></h3>
+      <ul class="list-unstyled">
+        {% for post in site.tags[this_word] %}
+          {% if post.title != null %}
+          <li style="line-height: 35px;">
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <span class="date">- {{ post.date | date: "%B %e, %Y" }}</span>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endunless %}
+  {% endfor %}
+</div>
+
+<div class="clearfix"></div>
+
+{% assign tag_words = nil %}
