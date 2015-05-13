@@ -259,8 +259,24 @@ li > a {
   }
 }
 
+.hidden-large-inline {
+  display: none !important;
+
+  @include mobile {
+    display: inline !important;
+  }
+}
+
 .hidden-small {
   display: block !important;
+
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.hidden-small-inline {
+  display: inline !important;
 
   @include mobile {
     display: none !important;

@@ -12,9 +12,9 @@ layout: default
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
     {% if page.author %}
-    <span class="post-author">-- <a href="{{ site.baseurl }}/about/">{{ page.author }}</a></span>
+    <span class="post-author">-- <a href="{{ site.baseurl }}/about.html">{{ page.author }}</a></span>
     {% else %}
-    <span class="post-author">-- <a href="{{ site.baseurl }}/about/">{{ site.nickname }}</a></span>
+    <span class="post-author">-- <a href="{{ site.baseurl }}/about.html">{{ site.nickname }}</a></span>
     {% endif %}
   </div>
 
