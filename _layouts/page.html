@@ -3,10 +3,7 @@ layout: default
 ---
 
 <article class="page main-article">
-  <h1 class="main-title">
-    {{ page.title }}
-    {% if page.icon %}<i class="page-icons {{ page.icon }} svg-icon-round"></i>{% endif %}
-  </h1>
+  <h1 class="main-title">{{ page.title }}{% if page.icon %}<i class="page-icons {{ page.icon }} svg-icon-round"></i>{% endif %}</h1>
 
   <div class="entry">
     {{ content }}
