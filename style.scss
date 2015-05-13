@@ -116,6 +116,7 @@ img {
 }
 
 .date {
+  font-family: $nunito;
   font-style: italic;
   color: $gray;
 
@@ -159,7 +160,7 @@ a {
   transition: all 0.4s ease 0s;
 
   &.active {
-    color: $limeGreen;
+    color: $limeGreen !important;
   }
 
   &:hover, &:active, &:focus {
@@ -272,15 +273,24 @@ li > a {
 
 .wrapper-masthead {
   margin-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid $lightGray;
 
   @include mobile {
     background-color: $darkBlue;
+    padding-left: 0;
+    padding-right: 0;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
 
   @include mobile {
     border: none;
@@ -372,22 +382,45 @@ nav {
   }
 
   a {
-    margin-left: 20px;
-    color: $darkGray;
+    margin-left: 30px;
+    color: $gray;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
+    &:hover {
+      color: $darkGray;
+    }
+
     @include mobile {
-      margin: 0 10px;
-      color: $limeGreen;
+      margin: 0 10px !important;
+      color: $lightGray;
+
+      &:hover {
+        color: $gray;
+      }
     }
   }
 }
 
 //
-// .main
+// #main
 //
+
+#main {
+  .main-article {
+    max-width: 45rem;
+    margin: 0 auto;
+  }
+
+  .main-title {
+    text-align: center;
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+}
 
 .posts > .post {
   padding-bottom: 2em;
@@ -417,13 +450,16 @@ nav {
     text-transform: uppercase;
     font-size: 15px;
   }
+
+  @include mobile {
+    font-size: 16px;
+  }
 }
 
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid $lightGray;
-  border-bottom: 1px solid $lightGray;
-  background-color: $lightGray;
+  background: none repeat scroll 0 0 $darkBlue;
 }
 
 footer {
