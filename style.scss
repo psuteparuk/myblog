@@ -291,12 +291,12 @@ li > a {
   margin-bottom: 50px;
   padding-left: 15px;
   padding-right: 15px;
-  border-bottom: 1px solid $lightGray;
 
   @include mobile {
     background-color: $darkBlue;
     padding-left: 0;
     padding-right: 0;
+    border-bottom: 1px solid $lightGray;
 
     .container {
       padding-left: 0;
@@ -306,6 +306,7 @@ li > a {
 }
 
 .masthead {
+  border-bottom: 1px solid $lightGray;
   padding: 20px 0;
 
   @include mobile {
