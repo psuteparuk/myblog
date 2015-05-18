@@ -29,7 +29,7 @@ permalink: /tags.html
     {% unless forloop.last %}
     {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
     <div class="tab-pane col" name="{{ this_word | replace: ' ', '-' }}-ref">
-      <h3 style="margin-top: 0px">Posts tagged with <span class="date">{{ this_word }}</span></h3>
+      <h3 style="margin-top: 0px">Posts tagged with <span class="date" style="font-size: 20px">{{ this_word }}</span></h3>
       <ul class="list-unstyled">
         {% for post in site.tags[this_word] %}
           {% if post.title != null %}

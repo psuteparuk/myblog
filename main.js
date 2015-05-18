@@ -15,7 +15,7 @@ $(document).ready(function() {
   });
 
   /* Sidebar */
-  var $mainArticle = $('#main .main-article');
+  var $mainArticle = $('.post.main-article');
   $('#sidebar-toggle').click(function(e) {
     e.preventDefault();
     $(this).toggleClass('cross');
@@ -43,8 +43,6 @@ $(document).ready(function() {
 
     $(this).toggleClass('rotate');
     $(this).toggleClass('rotate-reset');
-
-    $mainArticle.toggleClass('main-article');
   });
 
   /* Categories and Tags */

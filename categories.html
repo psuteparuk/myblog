@@ -34,7 +34,7 @@ permalink: /categories.html
 <div class="tab-panel col">
   {% for category in site.categories %}
     <div class="tab-pane col" name="{{ category[0] | replace: ' ', '-' }}-ref">
-      <h3 style="margin-top: 0px">Posts in <span class="date">{{ category[0] }}</span></h3>
+      <h3 style="margin-top: 0px">Posts in <span class="date" style="font-size: 20px">{{ category[0] }}</span></h3>
       <ul class="list-unstyled">
         {% assign pages_list = category[1] %}
         {% for post in pages_list %}

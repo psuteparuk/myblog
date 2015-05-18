@@ -8,17 +8,23 @@ nav: home
   {% for post in site.posts %}
     <article class="post">
 
+      {% if forloop.first %}
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      {% else %}
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+      {% endif %}
 
       <div class="date">
         {{ post.date | date: "%B %e, %Y" }}
       </div>
 
+      {% if forloop.first %}
       <div class="entry">
         {{ post.excerpt }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      {% endif %}
     </article>
   {% endfor %}
 
