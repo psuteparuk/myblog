@@ -1,12 +1,4 @@
 $(document).ready(function() {
-  /* Show-up animation */
-  $('#main').css('opacity', 0);
-  setTimeout(function() {
-    $('#main').animate({ opacity: '1' }, 350, 'linear', function() {
-      $(this).removeAttr('style');
-    });
-  }, 350);
-
   /* Nav */
   $('.masthead nav a').each(function() {
     if ($(this).prop('href') == [location.protocol, '//', location.host, location.pathname].join('')) {
