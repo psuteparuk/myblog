@@ -31,7 +31,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $titillium;
+  font-family: $opensans;
   color: $darkerGray;
   font-weight: bold;
 
@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
+  font-family: $raleway;
   a {
     color: inherit;
   }
@@ -57,6 +58,7 @@ h2 {
 
 h3 {
   font-size: 20px;
+  font-weight: normal;
   a {
     color: inherit;
   }
@@ -119,7 +121,7 @@ img {
 }
 
 .date {
-  font-family: $nunito;
+  font-family: $raleway;
   font-size: 16px;
   color: $gray;
 }
@@ -368,7 +370,7 @@ li > a {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $amaranth;
+  font-family: $indie;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -381,8 +383,8 @@ li > a {
 nav {
   float: right;
   margin: 10px 0;
-  font-family: $amaranth;
-  font-size: 18px;
+  font-family: $indie;
+  font-size: 20px;
   text-transform: uppercase;
 
   @include mobile {
@@ -499,7 +501,7 @@ nav {
     text-transform: uppercase;
     font-size: 15px;
     color: $gray;
-    border: 1px solid $gray;
+    border: 2px solid $gray;
     border-radius: 25px;
     padding: 5px 14px;
 

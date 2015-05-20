@@ -17,11 +17,10 @@
   .groups {
     display: inline;
     float: left;
-    font-family: $nunito;
+    font-family: $raleway;
 
     a {
       color: $gray;
-      font-style: italic;
 
       &:hover {
         color: $limeGreen;
