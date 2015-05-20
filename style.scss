@@ -493,6 +493,21 @@ nav {
     height: 0;
   }
 
+  .author {
+    font-family: $indie;
+    font-style: italic;
+    font-size: 20px;
+    color: $gray;
+
+    a {
+      font-style: normal;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
   .comments {
     margin-top: 10px;
   }

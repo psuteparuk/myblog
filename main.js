@@ -41,6 +41,7 @@ $(document).ready(function() {
   var switchTab = function($tab) {
     $('.category-panel a, .tag-panel a').removeClass('active');
     $tab.addClass('active');
+    window.location = $tab.attr('href');
 
     $('.tab-pane').hide();
     var tabname = $tab.attr('name');
