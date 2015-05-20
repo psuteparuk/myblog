@@ -10,25 +10,24 @@ $(document).ready(function() {
   var $mainArticle = $('.post.main-article');
   $('#sidebar-toggle').click(function(e) {
     e.preventDefault();
-    $(this).toggleClass('cross');
-    $(this).toggleClass('plus');
+    $(this).toggleClass('show-sidebar');
 
-    if ($(this).hasClass('plus')) {
-      $('.sidebar').animate({ left: '-=25%' });
-      $('.site-avatar-small').animate({ width: '50px', height: '50px' }).removeClass('hidden');
-      $('nav a').animate({ 'margin-left': '30px' }, 'fast');
-      $mainArticle.animate({ 'max-width': '45rem' }).addClass('.main-article');
-      $('.right-panel').animate({ width: '100%', 'margin-left': 0 }, 350, 'linear', function() {
-        $(this).removeClass('wrapper-right');
-        $(this).removeAttr('style');
-      }).css('overflow', 'visible');
-    } else if ($(this).hasClass('cross')) {
+    if ($(this).hasClass('show-sidebar')) {
       $('.sidebar').animate({ left: '+=25%' });
       $('.site-avatar-small').animate({ width: 0, height: 0 }).addClass('hidden');
       $('nav a').animate({ 'margin-left': '20px' }, 'fast');
       $mainArticle.animate({ 'max-width': '100%' }).removeClass('.main-article');
       $('.right-panel').animate({ width: '75%', 'margin-left': '25%' }, 350, 'linear', function() {
         $(this).addClass('wrapper-right');
+        $(this).removeAttr('style');
+      }).css('overflow', 'visible');
+    } else {
+      $('.sidebar').animate({ left: '-=25%' });
+      $('.site-avatar-small').animate({ width: '50px', height: '50px' }).removeClass('hidden');
+      $('nav a').animate({ 'margin-left': '30px' }, 'fast');
+      $mainArticle.animate({ 'max-width': '45rem' }).addClass('.main-article');
+      $('.right-panel').animate({ width: '100%', 'margin-left': 0 }, 350, 'linear', function() {
+        $(this).removeClass('wrapper-right');
         $(this).removeAttr('style');
       }).css('overflow', 'visible');
     }

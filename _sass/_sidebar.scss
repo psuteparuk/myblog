@@ -53,36 +53,65 @@
 }
 
 #sidebar-toggle {
-  padding: 0.8%;
+  border: none;
+  border-radius: 50%;
+  background: none;
   position: fixed;
   top: 10px;
   left: 10px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
   z-index: 99;
 
-  &.plus {
+  .svg-icon-round {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 9px;
+  }
+
+  .plus {
+    opacity: 1;
     border: 1px solid $limeGreen;
     background-size: 80%;
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE1LjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9Ii0wLjMyOCAwIDUxMiA1MTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgLTAuMzI4IDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGQ9Ik00NjcuNTM0LDIxMS44NjNIMjk5LjgxVjQ0LjEzOEMyOTkuODEsMTkuNzYzLDI4MC4wMzIsMCwyNTUuNjcyLDBjLTI0LjM3NSwwLTQ0LjEzOCwxOS43Ny00NC4xMzgsNDQuMTM4djE2Ny43MjVINDMuODEgIGMtMjQuMzc1LDAtNDQuMTM4LDE5Ljc3LTQ0LjEzOCw0NC4xMzhzMTkuNzYzLDQ0LjEzOCw0NC4xMzgsNDQuMTM4aDE2Ny43MjV2MTY3LjcyNWMwLDI0LjM3NSwxOS43NjMsNDQuMTM4LDQ0LjEzOCw0NC4xMzggIGMyNC4zNjgsMCw0NC4xMzgtMTkuNzYzLDQ0LjEzOC00NC4xMzhWMzAwLjEzOGgxNjcuNzI1YzI0LjM3NSwwLDQ0LjEzOC0xOS43NzcsNDQuMTM4LTQ0LjEzOCAgQzUxMS42NzIsMjMxLjYxOCw0OTEuOTA5LDIxMS44NjMsNDY3LjUzNCwyMTEuODYzeiIgZmlsbD0iIzMyQ0QzMiIvPgo8L3N2Zz4K);
-
-    &:hover {
-      -moz-box-shadow: 0 0 5px $limeGreen;
-      -webkit-box-shadow: 0 0 5px $limeGreen;
-      box-shadow: 0 0 5px $limeGreen;
-      filter:progid:DXImageTransform.Microsoft.Glow(Color=white,Strength=5);
-    }
   }
 
-  &.cross {
+  .cross {
+    opacity: 0;
     border: 1px solid $crimson;
     background-size: 60%;
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE1LjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTExLjk5OHB4IiBoZWlnaHQ9IjUxMS45ODFweCIgdmlld0JveD0iLTAuMzI5IDAuMDAxIDUxMS45OTggNTExLjk4MSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAtMC4zMjkgMC4wMDEgNTExLjk5OCA1MTEuOTgxIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZD0iTTMyNS4yODcsMjU2TDQ5Ny4yNDYsODQuMDQxYzE5LjIzLTE5LjIyMiwxOS4yMy01MC4zOTIsMC02OS42MjJjLTE5LjIzLTE5LjIyMi01MC40MTUtMTkuMjIyLTY5LjYxMywwTDI1NS42NjYsMTg2LjM3ICBMODMuNzA3LDE0LjQxMWMtMTkuMjE0LTE5LjIxNC01MC4zOTItMTkuMjE0LTY5LjYxMywwYy0xOS4yMywxOS4yMzgtMTkuMjMsNTAuNDA4LDAsNjkuNjIybDE3MS45NTksMTcxLjk1OUwxNC4wOTQsNDI3Ljk0NiAgYy0xOS4yMywxOS4yMy0xOS4yMyw1MC4zOTksMCw2OS42MTRjOS42MTUsOS42MTQsMjIuMjExLDE0LjQyMiwzNC44MDcsMTQuNDIyczI1LjE5OS00LjgwOCwzNC44MDctMTQuNDIybDE3MS45NTktMTcxLjk1MSAgTDQyNy42MjUsNDk3LjU2YzkuNjA2LDkuNjE0LDIyLjIxMSwxNC40MjIsMzQuODA3LDE0LjQyMnMyNS4xOTktNC44MDgsMzQuODA3LTE0LjQyMmMxOS4yMy0xOS4yMywxOS4yMy01MC4zOTksMC02OS42MTQgIEwzMjUuMjg3LDI1NnoiIGZpbGw9IiNEQzE0M0MiLz4KPC9zdmc+Cg==);
+  }
 
-    &:hover {
-      -moz-box-shadow: 0 0 5px $white;
-      -webkit-box-shadow: 0 0 5px $white;
-      box-shadow: 0 0 5px $white;
-      filter:progid:DXImageTransform.Microsoft.Glow(Color=white,Strength=5);
+  &.show-sidebar {
+    .plus {
+      opacity: 0;
     }
 
+    .cross {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &.rotate:hover {
+    -moz-box-shadow: 0 0 5px $white;
+    -webkit-box-shadow: 0 0 5px $white;
+    box-shadow: 0 0 5px $white;
+    filter:progid:DXImageTransform.Microsoft.Glow(Color=white,Strength=5);
+  }
+
+  &.rotate-reset:hover {
+    -moz-box-shadow: 0 0 5px $limeGreen;
+    -webkit-box-shadow: 0 0 5px $limeGreen;
+    box-shadow: 0 0 5px $limeGreen;
+    filter:progid:DXImageTransform.Microsoft.Glow(Color=white,Strength=5);
+  }
+
+  &:hover, &:focus, &:active {
+    cursor: pointer;
+    outline: none;
   }
 }

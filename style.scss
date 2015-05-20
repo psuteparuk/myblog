@@ -15,6 +15,7 @@
 
 html {
   font-size: 100%;
+  -webkit-backface-visibility: hidden;
 }
 
 body {
@@ -493,7 +494,7 @@ nav {
     height: 0;
   }
 
-  .author {
+  .site-author {
     font-family: $indie;
     font-style: italic;
     font-size: 20px;
