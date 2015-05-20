@@ -2,7 +2,7 @@
 layout: page
 title: Categories
 icon: folder-icon
-permalink: /categories.html
+permalink: /categories/
 ---
 
 <div class="category-panel col">
@@ -11,7 +11,7 @@ permalink: /categories.html
     {% if categories_list.first[0] == null %}
       {% for category in categories_list %}
         <li>
-          <a href="{{ site.baseurl }}/{{ site.categories_path}}#{{ category | replace: ' ', '-' }}-ref" name="{{ category | replace: ' ', '-' }}-ref">
+          <a href="#{{ category | replace: ' ', '-' }}-ref" name="{{ category | replace: ' ', '-' }}-ref">
             {{ category }}
             <span class="badge pull-right">{{ site.categories[category].size }}</span>
           </a>
@@ -20,7 +20,7 @@ permalink: /categories.html
     {% else %}
       {% for category in categories_list %}
         <li>
-          <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace: ' ', '-' }}-ref" name="{{ category[0] | replace: ' ', '-' }}-ref">
+          <a href="#{{ category[0] | replace: ' ', '-' }}-ref" name="{{ category[0] | replace: ' ', '-' }}-ref">
             {{ category[0] }}
             <span class="badge pull-right">{{ category[1].size }}</span>
           </a>

@@ -4,13 +4,13 @@
         {% assign categories_list = page.categories %}
         {% if categories_list.first[0] == null %}
         {% for category in categories_list %}
-          <li><a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace: ' ', '-' }}-ref">
+          <li><a href="{{ site.baseurl }}/{{ site.categories_path }}/#{{ category | replace: ' ', '-' }}-ref">
             {{ category | join: '/' }}{% unless forloop.last %},{% endunless %}
           </a></li>
         {% endfor %}
         {% else %}
         {% for category in categories_list %}
-          <li><a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace: ' ', '-' }}-ref">
+          <li><a href="{{ site.baseurl }}/{{ site.categories_path }}/#{{ category[0] | replace: ' ', '-' }}-ref">
             {{ category[0] | join: '/' }}{% unless forloop.last %},{% endunless %}
           </a></li>
         {% endfor %}
@@ -25,13 +25,13 @@
         {% assign tags_list = page.tags %}
         {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
-          <li><a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace: ' ', '-' }}-ref">
+          <li><a href="{{ site.baseurl }}/{{ site.tags_path }}/#{{ tag | replace: ' ', '-' }}-ref">
             {{ tag }}{% unless forloop.last %},{% endunless %}
           </a></li>
         {% endfor %}
         {% else %}
         {% for tag in tags_list %}
-          <li><a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace: ' ', '-' }}-ref">
+          <li><a href="{{ site.baseurl }}/{{ site.tags_path }}/#{{ tag[0] | replace: ' ', '-' }}-ref">
             {{ tag[0] }}{% unless forloop.last %},{% endunless %}
           </a></li>
         {% endfor %}
