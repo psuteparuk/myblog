@@ -18,7 +18,7 @@
 
     .badge {
       display: inline-block;
-      background: none repeat scroll 0 0 $limeGreen;
+      background: none repeat scroll 0 0 $green;
       border-radius: 10px;
       color: $white;
       font-size: 12px;
@@ -55,7 +55,7 @@
 
       > li > a {
         @include mobile {
-          color: $limeGreen;
+          color: $green;
         }
       }
     }

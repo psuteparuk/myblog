@@ -26,7 +26,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1180px;
   padding: 0 10px;
   width: 100%;
 }
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
-  font-family: $raleway;
+  font-family: $montserrat;
   a {
     color: inherit;
   }
@@ -75,11 +75,11 @@ p {
 }
 
 a {
-  color: $limeGreen;
+  color: $green;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $limeGreen;
+    color: $green;
   }
 }
 
@@ -158,7 +158,7 @@ a {
   transition: all 0.4s ease 0s;
 
   &.active {
-    color: $limeGreen !important;
+    color: $green !important;
   }
 
   &:hover, &:active, &:focus {
@@ -170,7 +170,7 @@ li > a {
   color: $darkGray;
 
   &:hover, &:active, &:focus {
-    color: $limeGreen
+    color: $green
   }
 }
 
@@ -315,7 +315,6 @@ li > a {
     background-color: $darkBlue;
     padding-left: 0;
     padding-right: 0;
-    border-bottom: 1px solid $lightGray;
 
     .container {
       padding-left: 0;
@@ -415,15 +414,14 @@ li > a {
 nav {
   float: right;
   margin: 10px 0;
-  font-family: $indie;
-  font-size: 20px;
+  font-family: $montserrat;
+  font-size: 1rem;
   text-transform: uppercase;
 
   @include mobile {
     float: none;
     margin-top: 9px;
     display: block;
-    font-size: 16px;
   }
 
   a {
@@ -565,8 +563,8 @@ nav {
     padding: 5px 14px;
 
     &:hover {
-      color: $limeGreen;
-      border-color: $limeGreen;
+      color: $green;
+      border-color: $green;
     }
   }
 
@@ -577,7 +575,6 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid $lightGray;
   background: none repeat scroll 0 0 $darkBlue;
 }
 
@@ -640,8 +637,6 @@ footer {
   }
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
 @import "sidebar";
