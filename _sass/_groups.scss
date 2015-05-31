@@ -27,13 +27,13 @@
       text-align: center;
       vertical-align: baseline;
 
-      @include mobile {
+      @include mobile-lg {
         font-size: 10px;
       }
     }
   }
 
-  @include mobile {
+  @include mobile-lg {
     width: 40%;
 
     &.col {
@@ -54,14 +54,14 @@
       padding-left: 0;
 
       > li > a {
-        @include mobile {
+        @include mobile-lg {
           color: $green;
         }
       }
     }
   }
 
-  @include mobile {
+  @include mobile-lg {
     width: 60%;
 
     &.col {

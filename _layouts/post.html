@@ -2,42 +2,46 @@
 layout: default
 ---
 
-<article class="post main-article">
-  <h1 class="main-title">{{ page.title }}</h1>
+<div class="container-12">
+  <div class="grid-12">
+    <article class="post main-article">
+      <h1 class="main-title">{{ page.title }}</h1>
 
-  <div class="date">
-    {{ page.date | date: "%B %e, %Y" }}
+      <div class="date">
+        {{ page.date | date: "%B %e, %Y" }}
+      </div>
+
+      <div class="entry">
+        {{ content }}
+        <p class="site-author pull-right">&rarr; Written by <a href="{{ site.baseurl }}/about/">{{ site.nickname }}</a></p>
+      </div>
+
+      <hr>
+
+      <div class="misc clearfix">
+        <div class="groups">
+          {% include groups.html %}
+        </div>
+
+        <div class="share">
+          {% include share.html %}
+        </div>
+      </div>
+
+      <ul class="pager clearfix">
+        {% if page.previous %}
+        <li class="previous"><a href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous Post</a></li>
+        {% else %}
+        <li class="previous disabled"><a>&larr; Previous Post</a></li>
+        {% endif %}
+        {% if page.next %}
+        <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">Next Post &rarr;</a></li>
+        {% else %}
+        <li class="next disabled"><a>Next Post &rarr;</a></li>
+        {% endif %}
+      </ul>
+
+      {% include disqus.html %}
+    </article>
   </div>
-
-  <div class="entry">
-    {{ content }}
-    <p class="site-author pull-right">&rarr; Written by <a href="{{ site.baseurl }}/about/">{{ site.nickname }}</a></p>
-  </div>
-
-  <hr>
-
-  <div class="misc clearfix">
-    <div class="groups">
-      {% include groups.html %}
-    </div>
-
-    <div class="share">
-      {% include share.html %}
-    </div>
-  </div>
-
-  <ul class="pager clearfix">
-    {% if page.previous %}
-    <li class="previous"><a href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
-    {% else %}
-    <li class="previous disabled"><a>&larr; Previous</a></li>
-    {% endif %}
-    {% if page.next %}
-    <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-    {% else %}
-    <li class="next disabled"><a>Next &rarr;</a></li>
-    {% endif %}
-  </ul>
-
-  {% include disqus.html %}
-</article>
+</div>

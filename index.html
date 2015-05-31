@@ -1,30 +1,39 @@
 ---
 layout: default
+banner: true
 title: Potchy's Blog
 nav: home
 ---
 
-<div class="posts main-article">
+<div class="posts">
   {% for post in paginator.posts %}
-    <article class="post">
+    <article class="post post-index">
+      <div class="post-wrap {% if forloop.first %}post-lead{% endif %} container-12 clearfix">
+        <div class="date grid-3">
+          <span class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              <span class="day">{{ post.date | date: "%e" }}</span>
+              <span class="month-year">{{ post.date | date: "%B %y" }}</span>
+            </time>
+          </span>
+        </div>
 
-      {% if forloop.first and paginator.page == 1 %}
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      {% else %}
-      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-      {% endif %}
+        <div class="grid-9">
+          <h3 class="post-header"><a href="{{ site.baseurl }}{{ post.url }}" class="post-title">{{ post.title }}</a></h3>
 
-      <div class="date">
-        {{ post.date | date: "%B %e, %Y" }}
+          <div class="entry">
+            {% if forloop.first and paginator.page == 1 %}
+            <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
+            {% else %}
+            <p>{{ post.content | strip_html | truncatewords: 20 }}</p>
+            {% endif %}
+          </div>
+
+          {% if forloop.first and paginator.page == 1 %}
+          <div class="read-more"><a href="{{ site.baseurl }}{{ post.url }}">Read More &rarr;</a></div>
+          {% endif %}
+        </div>
       </div>
-
-      {% if forloop.first and paginator.page == 1 %}
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-      {% endif %}
     </article>
   {% endfor %}
 

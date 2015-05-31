@@ -1,125 +1,11 @@
 ---
 ---
 
-//
-// IMPORTS
-//
+@charset "UTF-8";
 
 @import "reset";
 @import "variables";
-// Syntax highlighting @import is at the bottom of this file
-
-/**************/
-/* BASE RULES */
-/**************/
-
-html {
-  font-size: 100%;
-  -webkit-backface-visibility: hidden;
-}
-
-body {
-	background: $white;
-  font: 18px/1.4 $opensans;
-  color: $darkGray;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1180px;
-  padding: 0 10px;
-  width: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $opensans;
-  color: $darkerGray;
-  font-weight: bold;
-
-  line-height: 1.7;
-  margin: 1em 0 15px;
-  padding: 0;
-
-  @include mobile {
-    line-height: 1.4;
-  }
-}
-
-h1 {
-  font-size: 30px;
-  font-family: $montserrat;
-  a {
-    color: inherit;
-  }
-}
-
-h2 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: normal;
-  a {
-    color: inherit;
-  }
-}
-
-h4 {
-  font-size: 18px;
-  color: $gray;
-}
-
-p {
-  margin: 15px 0;
-}
-
-a {
-  color: $green;
-  text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
-    color: $green;
-  }
-}
-
-ul, ol {
-  margin: 15px 0;
-  padding-left: 30px;
-}
-
-ul {
-  list-style-type: disc;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ol ul, ul ol, ul ul, ol ol {
-  margin: 0;
-}
-
-ul ul, ol ul {
-  list-style-type: circle;
-}
-
-em, i {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
-
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  max-width: none;
-}
+@import "base";
 
 .date {
   font-family: $raleway;
@@ -127,39 +13,9 @@ img {
   color: $gray;
 }
 
-// Specify the color of the selection
-::-moz-selection {
-  color: $black;
-  background: $lightGray;
-}
-::selection {
-  color: $black;
-  background: $lightGray;
-}
-
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
-
 a {
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
-
-  &.active {
-    color: $green !important;
-  }
 
   &:hover, &:active, &:focus {
     outline: 0;
@@ -171,33 +27,6 @@ li > a {
 
   &:hover, &:active, &:focus {
     color: $green
-  }
-}
-
-.col {
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-}
-
-.pull-right {
-  float: right;
-}
-
-.right-panel {
-  width: 100%;
-  margin-left: 0;
-  -webkit-transition: all 0.6s ease 0s;
-  transition: all 0.6s ease 0s;
-
-  &.sidebar-view {
-    width: $mainWidth;
-    margin-left: $sidebarWidth;
-
-    @include mobile {
-      width: 100%;
-      margin-left: 0;
-    }
   }
 }
 
@@ -216,25 +45,11 @@ li > a {
   }
 }
 
-.rotate {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-}
-
-.rotate-reset {
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: all 0.6;
-  transition: all 0.6s;
-}
-
 .svg-icon-round {
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: $white;
+  background-color: $smoke;
 }
 
 .page-icons {
@@ -248,127 +63,36 @@ li > a {
   background-size: 100%;
 }
 
-//
-// .wrapper-right
-//
-
-.wrapper-right {
-  width: $mainWidth;
-  margin-left: $sidebarWidth;
-
-  @include mobile {
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
-//
-// .hidden
-//
-
-.hidden {
-  display: none !important;
-}
-
-.hidden-large {
-  display: none !important;
-
-  @include mobile {
-    display: block !important;
-  }
-}
-
-.hidden-large-inline {
-  display: none !important;
-
-  @include mobile {
-    display: inline !important;
-  }
-}
-
-.hidden-small {
-  display: block !important;
-
-  @include mobile {
-    display: none !important;
-  }
-}
-
-.hidden-small-inline {
-  display: inline !important;
-
-  @include mobile {
-    display: none !important;
-  }
-}
-
-//
-// .masthead
-//
+/**********/
+/* HEADER */
+/**********/
 
 .wrapper-masthead {
-  margin-bottom: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background: $smoke;
 
-  @include mobile {
-    background-color: $darkBlue;
-    padding-left: 0;
-    padding-right: 0;
-
-    .container {
-      padding-left: 0;
-      padding-right: 0;
-    }
+  &.no-banner {
+    background: $burn;
   }
 }
 
 .masthead {
-  border-bottom: 1px solid $lightGray;
-  padding: 20px 0;
-
-  @include mobile {
-    border: none;
-    text-align: center;
-  }
-}
-
-.site-avatar {
-  width: 70px;
-  height: 70px;
-
-  img {
-    border-radius: 50%;
-    width: 50%;
-    -webkit-transition: all 0.2s ease 0s;
-    transition: all 0.2s ease 0s;
-
-    &:hover {
-      border-radius: 15%;
-    }
-  }
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-
-    img {
-      width: 150px;
-    }
-  }
+  padding: 1.5rem 0;
+  overflow: hidden;
 }
 
 .site-avatar-small {
+  height: 45px;
   float: left;
-  width: 50px;
-  height: 50px;
-  margin-right: 15px;
   -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
 
   img {
-    border-radius: 50px;
+    border-radius: 44px;
+    max-height: 100%;
+    margin-right: 0.8rem;
+    float: left;
     -webkit-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;
 
@@ -376,112 +100,117 @@ li > a {
       border-radius: 5px;
     }
   }
-
-  &.reduce {
-    width: 0;
-    height: 0;
-  }
-
-  @include mobile {
-    display: none !important;
-  }
-}
-
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
 }
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $burn;
+  display: block;
+  float: left;
   cursor: pointer;
-  font-family: $indie;
-  font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-family: $montserrat;
+  font-size: 1.75rem;
+  letter-spacing: -0.02rem;
+  line-height: 1;
+  margin-top: 0.52rem;
+  transition: all 0.4s ease 0s;
 
-  @include mobile {
-    color: $white;
+  &:hover {
+    color: $green;
   }
 }
 
 nav {
+  display: block;
   float: right;
-  margin: 10px 0;
   font-family: $montserrat;
   font-size: 1rem;
+  padding-top: 0.838rem;
   text-transform: uppercase;
 
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-  }
-
   a {
-    margin-left: 30px;
+    display: inline-block;
+    margin-left: 3rem;
     color: $gray;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
-    -webkit-transition: margin-left 0.6s ease 0s;
-    transition: margin-left 0.6s ease 0s;
-
-    &.reduce {
-      margin-left: 20px;
-    }
 
     &:hover {
-      color: $darkGray;
+      color: $darkerGray;
     }
 
-    @include mobile {
-      margin: 0 10px !important;
-      color: $lightGray;
-
-      &:hover {
-        color: $gray;
-      }
+    &.active {
+      color: $green;
     }
   }
 }
 
-//
-// #main
-//
-
-#main {
-  -webkit-animation: fadein 1.3s;
-     -moz-animation: fadein 1.3s;
-      -ms-animation: fadein 1.3s;
-          animation: fadein 1.3s;
-
-  @keyframes fadein {
-    from { opacity: 0 }
-    to { opacity: 1 }
+.no-banner {
+  .site-name {
+    color: $green;
   }
 
-  @-moz-keyframes fadein {
-    from { opacity: 0 }
-    to { opacity: 1 }
+  nav a {
+    color: $lightGray;
+
+    &:hover {
+      color: $gray;
+    }
+
+    &.active {
+      color: $green;
+    }
+  }
+}
+
+/**************/
+/* NAVIGATION */
+/**************/
+
+#mobile-menu-toggle {
+  display: none;
+  text-indent: -9999px;
+}
+
+/**********/
+/* BANNER */
+/**********/
+
+.banner {
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8), rgba(0,0,0,0)), url("../../images/banner.jpg") no-repeat fixed center center / cover;
+  display: table;
+  height: 70%;
+  width: 100%;
+
+  .banner-heading {
+    display: table-cell;
+    padding: 2em 0;
+    vertical-align: middle;
   }
 
-  @-webkit-keyframes fadein {
-    from { opacity: 0 }
-    to { opacity: 1 }
-  }
+  h1 {
+    color: $smoke;
+    display: block;
+    font-size: 2.75rem;
+    font-weight: normal;
+    margin: 0 auto;
+    max-width: 60%;
+    text-align: center;
 
-  @-ms-keyframes fadein {
-    from { opacity: 0 }
-    to { opacity: 1 }
+    span {
+      background-color: $orange;
+      border-radius: 25px;
+      padding: 0.7% 2%;
+    }
   }
+}
 
+/********/
+/* MAIN */
+/********/
+
+.main {
   .entry p {
     text-align: left;
   }
@@ -491,96 +220,37 @@ nav {
   }
 
   .main-article {
-    max-width: 45rem;
-    margin: 0 auto;
-    -webkit-transition: max-width 0.6s ease 0;
-    transition: max-width 0.6s ease 0;
-
-    &.sidebar-view {
-      max-width: 100%;
-    }
+    display: block;
+    margin: 0 auto 3rem;
+    max-width: 56.25rem;
   }
 
   .main-title {
     text-align: center;
-
-    @include mobile {
-      font-size: 24px;
-    }
   }
 }
 
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
-}
-
-.post {
-  text-align: center;
-
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-  }
-
-  hr {
-    border: 2px solid $lighterGray;
-    clear: both;
-    margin: 3rem auto;
-    width: 20%;
-    height: 0;
-  }
-
-  .site-author {
-    font-family: $indie;
-    font-style: italic;
-    font-size: 20px;
-    color: $gray;
-
-    a {
-      font-style: normal;
-    }
-
-    @include mobile {
-      font-size: 18px;
-    }
-  }
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-    color: $gray;
-    border: 2px solid $gray;
-    border-radius: 25px;
-    padding: 5px 14px;
-
-    &:hover {
-      color: $green;
-      border-color: $green;
-    }
-  }
-
-  @include mobile {
-    font-size: 16px;
-  }
-}
+/**********/
+/* FOOTER */
+/**********/
 
 .wrapper-footer {
-  margin-top: 50px;
-  background: none repeat scroll 0 0 $darkBlue;
+  background: none repeat scroll 0 0 $burn;
+  padding: 3rem 0;
 }
 
 footer {
-  padding: 20px 0;
+  display: block;
+  margin: 0 auto;
   text-align: center;
+  width: 80%;
+
+  .copyright {
+    color: $lightGray;
+    font-size: 0.9rem;
+    margin: 2rem 0 0;
+    text-align: center;
+  }
 }
 
 //
@@ -590,7 +260,7 @@ footer {
 .category-panel, .tag-panel, .tab-panel {
   font-size: 16px;
 
-  @include mobile {
+  @include mobile-lg {
     font-size: 13px;
   }
 }
@@ -602,30 +272,32 @@ footer {
 .pager {
   list-style: outside none none;
   text-align: center;
-  margin: 20px 0;
+  margin: 1.4rem 0;
   padding-left: 0;
-  font-size: 14px;
+  font-size: 1rem;
+
+  a:focus, a:active {
+    color: $orange;
+    border-color: $orange;
+  }
 
   li {
     display: inline;
+    padding: 0 0.3rem;
 
     > a, > span {
-      border: 1px solid $lighterGray;
+      border: 2px solid $lightGray;
       border-radius: 25px;
       display: inline-block;
       padding: 5px 14px;
     }
-  }
 
-  .previous {
-    > a, > span {
-      float: left;
-    }
-  }
-
-  .next {
-    > a, > span {
-      float: right;
+    &.previous, &.next {
+      > a:hover {
+        color: $smoke;
+        border-color: $orange;
+        background-color: $orange;
+      }
     }
   }
 
@@ -637,8 +309,9 @@ footer {
   }
 }
 
-@import "highlights";
+@import "posts";
+@import "animation";
+@import "responsive";
 @import "svg-icons";
-@import "sidebar";
 @import "groups";
 @import "misc";

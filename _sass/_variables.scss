@@ -5,10 +5,13 @@
 
 // Colors
 $blue: #2BA6CB;
-$crimson: #DC143C;
-$orange: #E74C34;
-$green: #00C957;
 $darkBlue: #2E3C50;
+$green: #00C96D;
+$darkGreen: #118C4E;
+$crimson: #DC143C;
+$orange: #FF9009;
+$smoke: #FBFBFB;
+$burn: #1B1B1B;
 
 // Grays
 $black: #000;
@@ -17,24 +20,43 @@ $darkGray: #404040;
 $gray: #737373;
 $lightGray: #c8c8c8;
 $lighterGray: #eaeaea;
-$white: #fbfbfb;
+$white: #fff;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
-$indie: "Indie Flower", cursive;
 $montserrat: Montserrat, Arial, sans-serif;
 $opensans: "Open Sans", Arial, sans-serif;
 $raleway: Raleway, Arial, sans-serif;
 
-// Side bar width
-$sidebarWidth: 25%;
-$mainWidth: 75%;
+// Screen breakpoints
+@mixin screen-lg {
+  @media only screen and (min-width: 960px) and (max-width: 1199px) {
+    @content;
+  }
+}
 
-// Mobile breakpoints
-@mixin mobile {
-  @media screen and (max-width: 760px) {
+@mixin tablet {
+  @media only screen and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media only screen and (min-width: 720px) and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin mobile-lg {
+  @media only screen and (max-width: 719px) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media only screen and (max-width: 550px) {
     @content;
   }
 }
