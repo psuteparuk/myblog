@@ -35,8 +35,8 @@ $(document).ready(function() {
 
   $(window).resize(function() {
     var w = $(window).width();
-    if (w > 320 && menu.is(':hidden')) {
-      menu.removeAttr('style');
+    if (w > 320 && $('nav').is(':hidden')) {
+      $('nav').removeAttr('style');
     }
   });
 
