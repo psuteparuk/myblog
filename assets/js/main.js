@@ -7,7 +7,7 @@ $(document).ready(function() {
   });
 
   /* Posts Animation on Homepage */
-  var $indexPosts = $('.post-index .post-wrap');
+  var $indexPosts = $('.post-index');
   var indexPostsAnimate = function() {
     if ($indexPosts.length) {
       var topOfWindow = $(window).scrollTop();

@@ -2,98 +2,101 @@
 /* POSTS */
 /*********/
 
-.posts > .post-index .post-wrap {
+.posts > .post-index {
   visibility: hidden;
-  padding-top: 4.375rem;
-  padding-bottom: 4.375rem;
-  border-bottom: 1px solid $lightGray;
-  text-align: left;
 
-  &.post-lead {
-    padding-top: 7.5rem;
+  .post-wrap {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    border-bottom: 1px solid $lightGray;
+    text-align: left;
 
-    .date .post-meta {
-      .day {
-        font-size: 4rem;
+    &.post-lead {
+      padding-top: 7.5rem;
+
+      .date .post-meta {
+        .day {
+          font-size: 4rem;
+        }
+
+        .month-year {
+          font-size: 1rem;
+        }
       }
 
-      .month-year {
-        font-size: 1rem;
+      .post-header {
+        font-size: 2.8rem;
+
+        .post-title {
+          color: $green;
+        }
+      }
+    }
+
+    .date {
+      margin-bottom: 0;
+
+      .post-meta {
+        display: block;
+        text-align: center;
+        line-height: 1;
+
+        .day {
+          display: block;
+          font-family: $montserrat;
+          font-size: 3.25rem;
+          font-weight: 800;
+          color: $orange;
+        }
+
+        .month-year {
+          display: block;
+          font-size: 0.875rem;
+          color: $burn;
+          font-family: $montserrat;
+          text-transform: uppercase;
+        }
       }
     }
 
     .post-header {
-      font-size: 2.8rem;
-
-      .post-title {
-        color: $green;
-      }
+      font-size: 2.125rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0 0 0.9375rem;
+      padding: 0;
+      text-transform: uppercase;
+      text-align: left;
     }
-  }
 
-  .date {
-    margin-bottom: 0;
-
-    .post-meta {
-      display: block;
-      text-align: center;
-      line-height: 1;
-
-      .day {
-        display: block;
-        font-family: $montserrat;
-        font-size: 3.25rem;
-        font-weight: 800;
-        color: $orange;
-      }
-
-      .month-year {
-        display: block;
-        font-size: 0.875rem;
-        color: $burn;
-        font-family: $montserrat;
-        text-transform: uppercase;
-      }
-    }
-  }
-
-  .post-header {
-    font-size: 2.125rem;
-    font-weight: 700;
-    line-height: 1.1;
-    margin: 0 0 0.9375rem;
-    padding: 0;
-    text-transform: uppercase;
-    text-align: left;
-  }
-
-  .entry {
-    font-size: 1.25rem;
-    margin-top: 0.625rem;
-    text-align: left;
-
-    p {
-      margin: 0;
+    .entry {
       font-size: 1.25rem;
+      margin-top: 0.625rem;
+      text-align: left;
+
+      p {
+        margin: 0;
+        font-size: 1.25rem;
+      }
     }
-  }
 
-  .read-more {
-    margin-top: 0.625rem;
-    text-align: left;
-  }
+    .read-more {
+      margin-top: 0.625rem;
+      text-align: left;
+    }
 
-  .read-more a {
-    display: inline-block;
-    font-size: 1.25rem;
-    color: $gray;
-    border: 2px solid $orange;
-    border-radius: 25px;
-    padding: 0.7% 2%;
+    .read-more a {
+      display: inline-block;
+      font-size: 1.25rem;
+      color: $gray;
+      border: 2px solid $orange;
+      border-radius: 25px;
+      padding: 0.7% 2%;
 
-    &:hover {
-      color: $white;
-      background-color: $orange;
+      &:hover {
+        color: $white;
+        background-color: $orange;
+      }
     }
   }
 }
