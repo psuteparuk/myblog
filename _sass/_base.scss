@@ -7,7 +7,7 @@
    ============================================================ */ 
    html, body             { width:100%; height:100%; }
    body                   { color:$burn; background:$smoke; font:normal 100%/1.4 serif; font-family:$opensans; cursor:default; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; -webkit-backface-visibility: hidden; }
-   
+
    /* HEADINGS
    ---------------------------------------- */ 
    h1, h2, h3, h4, h5, h6 { color:$darkerGray; font-weight:bold; font-family:$montserrat; line-height:1.4; }
@@ -17,11 +17,11 @@
    h4                     { font-size:1.125rem; }
    h5                     { font-size:1rem; }
    h6                     { font-size:1rem; }
-   
+
    /* PARAGRAPH
    ---------------------------------------- */ 
    p                      { margin:0 0 2rem; line-height:1.625; }
-   
+
    /* OTHER
    ---------------------------------------- */ 
    em, i                  { font-style:italic; }
@@ -83,7 +83,7 @@
    .head-quote            { font-family:$raleway; font-style:italic; font-size:1.75rem; display:block; margin:0 auto 1.5rem; text-align:center; max-width:75%; letter-spacing:.02rem; }
    .border                { border:solid 1px $lightGray; }
    .delay                 { -webkit-animation-delay:1s; -moz-animation-delay:1s; -o-animation-delay:1s; animation-delay:1s; }
-   
+
    .img-right             { display:block; float:right; width:35%; margin:0 0 1.5rem 3rem; }
    .img-right img         { width:100%; }
 
