@@ -21,7 +21,7 @@ $(document).ready(function() {
     }
   };
 
-  indexPostsAnimate();
+  setTimeout(indexPostsAnimate, 1000);
   $(window).on('scroll', function() {
     indexPostsAnimate();
   });
