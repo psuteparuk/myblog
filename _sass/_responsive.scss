@@ -239,3 +239,9 @@
     }
   }
 }
+
+@include webkit-browsers {
+  .banner {
+    background-attachment: scroll;
+  }
+}

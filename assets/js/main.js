@@ -61,4 +61,6 @@ $(document).ready(function() {
     var aSelector = 'a[name="' + bookmark.substr(1) + '"]';
     switchTab($('.category-panel ' + aSelector + ', .tag-panel ' + aSelector));
   }
+
+  FastClick.attach(document.body);
 });

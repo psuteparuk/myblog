@@ -60,3 +60,10 @@ $raleway: Raleway, Arial, sans-serif;
     @content;
   }
 }
+
+// only for webkit browsers
+@mixin webkit-browsers {
+  @media only screen and (-webkit-min-device-pixel-ratio: 0) {
+    @content;
+  }
+}

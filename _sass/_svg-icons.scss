@@ -24,7 +24,8 @@
 
   &:hover {
     opacity: 0.5;
-    transform: rotate(360deg);
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
   }
 }
 
@@ -36,6 +37,7 @@
   margin: 0;
 
   &:hover {
+    -webkit-transform: none;
     transform: none;
   }
 }
