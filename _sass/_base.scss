@@ -27,7 +27,8 @@
    em, i                  { font-style:italic; }
    strong, b              { font-weight:bold; }
    hr                     { border:2px solid $lightGray; clear:both; margin:3rem auto; height:0; width:20%; }
-   img                    { max-width: 100% }
+   img                    { max-width:100% }
+   figcaption             { font-size:0.75rem; color:$gray; }
 
    /* LINKS
    ---------------------------------------- */ 

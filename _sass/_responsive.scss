@@ -193,6 +193,23 @@
     }
   }
 
+  .main {
+    .main-title h1 {
+      font-size: 4.375rem;
+      padding: 5.625rem 0;
+    }
+
+    .main-article {
+      font-size: 70%;
+    }
+  }
+
+  .about {
+    .about-pic img {
+      max-width: 75%;
+    }
+  }
+
   .posts > .post-index {
     border-bottom: 1px solid $lightGray;
 
@@ -238,10 +255,16 @@
       font-size: 1.2rem;
     }
   }
-}
 
-@include webkit-browsers {
-  .banner {
-    background-attachment: scroll;
+  .main {
+    .main-title h1 {
+      font-size: 2.875rem;
+      padding-top: 5rem;
+      padding-bottom: 4.375rem;
+    }
+
+    .main-article {
+      font-size: 50%;
+    }
   }
 }

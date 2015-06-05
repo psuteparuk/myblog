@@ -1,0 +1,79 @@
+.main {
+  .main-title {
+    text-align: center;
+
+    h1 {
+      color: $burn;
+      font-size: 4.375rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0;
+      padding: 6.875rem 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .main-article {
+    display: block;
+    margin: 0 auto;
+    padding: 0 0 5rem;
+
+    .entry {
+      margin: 0 auto;
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+      }
+
+      a {
+        color: $green;
+      }
+
+      ul, ol {
+        padding-left: 1.25rem;
+        font-size: 1.125rem;
+      }
+
+      h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre {
+        text-align: center;
+      }
+
+      p {
+        margin: 0 auto 2em;
+        font-size: 1.125rem;
+      }
+    }
+
+    .entry.non-grid-entry {
+      h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, p {
+        max-width: 56.25rem;
+      }
+    }
+  }
+}
+
+.about {
+  .about-pic img {
+    display: block;
+    margin: 0 auto 3rem;
+    max-width: 100%;
+    border-radius: 50%;
+  }
+
+  .about-contact {
+    margin-bottom: 3rem;
+
+    .get-in-touch {
+      font-size: 3rem;
+      font-family: $montserrat;
+      padding: 3rem 0 1.5rem;
+    }
+
+    .contact-desc {
+      font-weight: normal !important;
+      margin: 0 auto 1em;
+    }
+  }
+}
