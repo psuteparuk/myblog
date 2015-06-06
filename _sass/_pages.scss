@@ -61,19 +61,20 @@
     max-width: 100%;
     border-radius: 50%;
   }
+}
 
-  .about-contact {
+.about-contact {
+  div {
     margin-bottom: 3rem;
+  }
+  .get-in-touch {
+    font-size: 3rem;
+    font-family: $montserrat;
+    padding: 0 0 1.5rem;
+  }
 
-    .get-in-touch {
-      font-size: 3rem;
-      font-family: $montserrat;
-      padding: 3rem 0 1.5rem;
-    }
-
-    .contact-desc {
-      font-weight: normal !important;
-      margin: 0 auto 1em;
-    }
+  .contact-desc {
+    font-weight: normal !important;
+    margin: 0 auto 1em;
   }
 }
