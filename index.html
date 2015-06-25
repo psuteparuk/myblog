@@ -8,7 +8,7 @@ nav: home
 <div class="posts">
   {% for post in paginator.posts %}
     <article class="post post-index">
-      <div class="post-wrap {% if forloop.first %}post-lead{% endif %} container-12 clearfix">
+      <div class="post-wrap {% if forloop.first and paginator.page == 1 %}post-lead{% endif %} container-12 clearfix">
         <div class="date grid-3">
           <span class="post-meta">
             <time datetime="{{ post.date | date_to_xmlschema }}">
